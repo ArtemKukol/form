@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>form</title>
+</head>
+<script>
+   const handleChenge = (isChecked) => {
+      if (isChecked) {
+         document.body.setAttribute('dark', '');
+   } else {
+      document.body.removeAttribute('dark');
+   }
+}
+</script>
+
+<body>
+   <header>
+      Стили
+      <div class="theme">
+         <input type="checkbox" onchange="handleChenge(this.checked)" />
+         Тёмная тема
+      </div>
+   </header>
+   <div class="content">
+      
+      <form action="#">
+         <textarea cols="30" rows="10"></textarea>
+      </form>
+   
+      <form action="#">
+         <label>
+            Your name
+            <input type="text">
+         </label>
+         
+      </form>
+      <br>
+      <form action="#"> <!--action - указывает на деректорию или файл на сервире, куда будут отправлены данные-->
+         <label for="name" class="sr-only" title="не видно надписи - Your name ">Your name</label>
+         <input id="name" type="text">
+      </form>
+   
+      <form action="">
+         <h2>Выбирите радиостанцию</h2>
+         <div>
+            <label for="#">
+               <input type="radio" name="radio-fm" value="87.1 FM">
+               87.1 FM
+            </label>
+            <br>
+   
+            <label for="#">
+               <input checked type="radio" name="radio-fm" value="95.5 FM"">
+                  95.5 FM
+               </label>
+               <br>
+               
+               <label for=" #">
+               <input type="radio" name="radio-fm" value="101.4 FM">
+               101.4 FM
+            </label>
+            <br>
+            <label>
+               <input type="radio" name="radio-fm" value="103.2 FM">
+               103.2 FM
+            </label>
+   
+         </div>
+      </form>
+   
+      <form action="#">
+         <h2>Ваши любимые блюда</h2>
+         <div>
+            <label for="">
+               <input type="checkbox" name="dishes" value="pizza">
+               pizza
+            </label>
+            <br>
+   
+            <label for="">
+               <input checked type="checkbox" name="dishes" value="burger">
+               burger
+            </label>
+            <br>
+            
+            <label for="">
+               <input type="checkbox" name="dishes" value="pasta"">
+               pasta
+            </label>
+         </div>
+         <button>Рассказать о любимых блюдах</button>
+      </form>
+   
+      <form action="#">
+         <h2>Категория</h2>
+         <select name="category">
+            <option value="computer">Компьютеры</option>
+            <option selected value="phone">Телефоны</option>
+            <option value="appliances">Бытовая техника</option>
+         </select>
+      </form>
+   
+      <h2>Разделение участков формы</h2>
+   
+      <form action="#">
+         <fieldset>
+            <legend>Данные о пользователе</legend>
+            <label>
+               
+               <input type="text" name="name" placeholder="Введите имя">
+               Имя
+            </label>
+            <br>
+   
+            <label>
+               
+               <input type="text" name="surname" placeholder="Введите фамилию">
+               Фамилия
+            </label>
+         </fieldset>
+         <fieldset>
+            <legend>Способ доставки</legend>
+            <label>
+               
+               <input type="radio" name="delivery" value="courier">
+               Курьер
+            </label>
+            <br>
+   
+            <label>
+               
+               <input type="radio" name="delivery" value="pickup">
+               Самовывоз
+            </label>
+         </fieldset>
+         <button>Заказать</button>
+      </form>
+   
+   </div>
+</body>
+
+</html>
